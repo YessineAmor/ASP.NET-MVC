@@ -52,6 +52,7 @@ namespace MvcMovie.Controllers
                     movies = new List<Movie>();
                 }
                 movies.Add(m);
+                Session["movies"] = movies;
                 return RedirectToAction("Index");
             }
             return View(m);
